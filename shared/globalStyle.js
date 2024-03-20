@@ -77,6 +77,16 @@ export const globalStyles = StyleSheet.create({
         color: "#555",
         textAlign: "center",
         marginBottom: 5,
-    }
+    },
+    board:{
+        padding: 20,
+        borderRadius: 10,
+        backgroundColor: "#f0f0f0",
+    },
+    timer:{
+        fontSize: 24,
+        fontWeight: "bold",
+        color: "#33c",
+    },
 
 });

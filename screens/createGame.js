@@ -16,7 +16,7 @@ const gameSchema = yup.object({
     diff: yup.string().required().oneOf(['normal', 'hard'], 'La dificultad debe ser normal o difícil'),
 });
 
-export default function CreateGame() {
+export default function CreateGame({ navigation }) {
 
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -26,7 +26,8 @@ export default function CreateGame() {
                 initialValues={{ row: "", col: "", diff: "normal" }} 
                 onSubmit={(values, actions) => {
                     actions.resetForm();
-                    console.log(values);
+                    console.log(values.diff);
+                    // navigation.navigate('PARTIDA', {difficulty: values.diff}, {rows: values.row}, {columns: values.col});
             }}>
 
                 {(props) => (

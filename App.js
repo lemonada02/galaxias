@@ -7,6 +7,8 @@ import CreateGame from './screens/createGame';
 import ContinueGame from './screens/continueGame';
 import Tutorial from './screens/tutorial';
 
+import Board from './screens/board';
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -25,6 +27,7 @@ export default function App() {
         <Stack.Screen name={"Cargar juego".toUpperCase()} component={ContinueGame} />
         <Stack.Screen name={"Crear juego".toUpperCase()} component={CreateGame} />
         <Stack.Screen name={"Tutorial".toUpperCase()} component={Tutorial} />
+        <Stack.Screen name={"Partida".toUpperCase()} component={Board} />
 
       </Stack.Navigator>
     </NavigationContainer>
