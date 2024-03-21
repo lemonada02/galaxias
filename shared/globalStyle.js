@@ -79,9 +79,10 @@ export const globalStyles = StyleSheet.create({
         marginBottom: 5,
     },
     board:{
-        padding: 20,
-        borderRadius: 10,
-        backgroundColor: "#f0f0f0",
+        padding: 8,
+        flex: 1,
+        backgroundColor: "#777",
+        flexWrap: "wrap",
     },
     timer:{
         fontSize: 24,

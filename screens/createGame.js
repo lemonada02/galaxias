@@ -7,11 +7,11 @@ import { Formik } from "formik";
 import * as yup from "yup";
 
 const gameSchema = yup.object({
-    row: yup.string().required().test('is-num-3-15', 'El número de Filas estará entre 3-15', (val) => { //nombre, mensaje, funcion
-        return parseInt(val) < 16 && parseInt(val) > 2;
+    row: yup.string().required().test('is-num-3-12', 'El número de Filas estará entre 3-12', (val) => { //nombre, mensaje, funcion
+        return parseInt(val) < 13 && parseInt(val) > 2;
     }),
-    col: yup.string().required().test('is-num-3-15', 'El número de Columnas estará entre 3-15', (val) => { //nombre, mensaje, funcion
-        return parseInt(val) < 16 && parseInt(val) > 2;
+    col: yup.string().required().test('is-num-3-12', 'El número de Columnas estará entre 3-12', (val) => { //nombre, mensaje, funcion
+        return parseInt(val) < 13 && parseInt(val) > 2;
     }),
     diff: yup.string().required().oneOf(['normal', 'hard'], 'La dificultad debe ser normal o difícil'),
 });
@@ -26,8 +26,7 @@ export default function CreateGame({ navigation }) {
                 initialValues={{ row: "", col: "", diff: "normal" }} 
                 onSubmit={(values, actions) => {
                     actions.resetForm();
-                    console.log(values.diff);
-                    // navigation.navigate('PARTIDA', {difficulty: values.diff}, {rows: values.row}, {columns: values.col});
+                    navigation.navigate('PARTIDA', {difficulty: values.diff, rows: values.row, columns: values.col});
             }}>
 
                 {(props) => (

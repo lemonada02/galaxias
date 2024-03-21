@@ -1,4 +1,4 @@
-import { View, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 import FlatButton from '../shared/flatButton';
 
 export default function ContinueGame({ navigation }) {
